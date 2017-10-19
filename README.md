@@ -22,27 +22,29 @@
 
 * Windows 10
 
+### VCRUNTIME140.dllが見つからないといったエラーが出た場合は [Microsoft Visual C++ 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/ja-jp/download/details.aspx?id=53840) をインストールしてください。
+
 ## 使い方
 
-start.vbsを開く（実行する）。※セキュリティの警告が出ます。ファイルのプロパティを開いて、ブロックの解除をすると出なくなります。
+* start.vbsを開く（実行する）。※セキュリティの警告が出ます。ファイルのプロパティを開いて、ブロックの解除をすると出なくなります。
 
-ドキュメントルートを指定するダイアログが表示されますので、WordPressの場合は「html\wp」としてOKボタンをクリック。
+* ドキュメントルートを指定するダイアログが表示されますので、WordPressの場合は「html\wp」としてOKボタンをクリック。
 
-ポート番号を指定するダイアログが表示されます。そのままOKボタンをクリック。
+* ポート番号を指定するダイアログが表示されます。そのままOKボタンをクリック。
 
-IEでサイトを開きますか？のダイアログが表示されます。とりあえずOKボタンをクリック。
+* IEでサイトを開きますか？のダイアログが表示されます。とりあえずOKボタンをクリック。
 
-これでIEが起動して初回はWordPressのセットアップ画面が表示されるはずです。されない場合はポート番号を変更するか、頑張って80番を開放してください。
+* これでIEが起動して初回はWordPressのセットアップ画面が表示されるはずです。されない場合はポート番号を変更するか、頑張って80番を開放してください。
 
 
 ### ツール
 
 どちらも開く（実行する）と「WindowsによってPCが保護されました」が表示されると思います。詳細情報をクリックして「実行」するか、新しいテキスト ドキュメント.txtを作って中身をコピペしてリネームすると出なくなると思います。
 
-mysql.bat
-中身：middleware\mariadb\bin\mysql -uroot -p
+mysql.bat  
+中身：middleware\mariadb\bin\mysql -uroot -p  
 start.vbsでMariaDBを起動した後に使えます。パスワードはrootです。
 
-wp-download.bat
-中身：bitsadmin.exe /TRANSFER latest-ja https://ja.wordpress.org/latest-ja.zip %CD%\html\latest-ja.zip
+wp-download.bat  
+中身：bitsadmin.exe /TRANSFER latest-ja https://ja.wordpress.org/latest-ja.zip %CD%\html\latest-ja.zip  
 https://ja.wordpress.org/latest-ja.zipをhtmlフォルダにダウンロードします。展開（解凍）は手動でお願いします。
