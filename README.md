@@ -9,9 +9,15 @@
 + 上記をmiddlewareフォルダに解凍し、できたフォルダをリネーム、xdebugのはphp/extに移動。
 + php/php.iniとmariadb/my.iniを作成
 + mariadbフォルダ内の不要なファイルやフォルダを削除（容量削減のため）
-+ start.vbs mysql.bat wp-download.bat作成
++ start.vbs、mysql.bat、wp-download.bat作成（ダウンロードしたフラグが立って今のとこちょっと面倒です。）
 + htmlフォルダ作成、index.php（中身はphpinfo();）作成
 + htmlフォルダlatest-ja.zipをダウンロードして解凍、フォルダをwpにリネーム、wp-config.phpを作成（データベースの情報を設定）
+
+できること
++ ダウンロードして解凍するだけでWindowsでWordPressを動かせます。ローカルなので修正も楽々です。
++ Xdebug入りで設定済みですので、すぐにデバッグが可能です。htmlフォルダにはVisual Studio CodeのPHP Debugの設定ファイルを入れてあります。
++ WordPressのパーマリンクの設定からindex.phpを抜いてもリライトしてくれます。ルータースクリプトとか入れてないんですけど……
++ concrete5も一通り動きました。
 
 ## インストール
 
@@ -22,7 +28,7 @@
 
 * Windows 10
 
-### VCRUNTIME140.dllが見つからないといったエラーが出た場合は [Microsoft Visual C++ 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/ja-jp/download/details.aspx?id=53840) をインストールしてください。
+#### VCRUNTIME140.dllが見つからないといったエラーが出た場合は [Microsoft Visual C++ 2015 再頒布可能パッケージ Update 3](https://www.microsoft.com/ja-jp/download/details.aspx?id=53840) のx86の方をインストールしてください。
 
 ## 使い方
 
