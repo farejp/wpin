@@ -1,2 +1,5 @@
-html/
-middleware/
+html/*
+middleware/*
+
+!html/index.php
+!html/wp
