@@ -37,7 +37,10 @@ if port = "" then WScript.Quit 'キャンセル時
 
 'MariaDB起動
 'WordPressを動かさないなら下の行をコメントにしてください。（コメントにすると黒い画面は1つになります。）
+'下のは日本語で各種メッセージを表示したい場合
 shell.run "%ComSpec% /c middleware\mariadb\bin\mysqld --console"
+'shell.run "%ComSpec% /c chcp 65001 & middleware\mariadb\bin\mysqld --console --lc_messages_dir=middleware\mariadb\japanese --lc_messages=JA_JP"
+
 
 'PHPビルトインサーバー起動
 'IEを閉じるとPHPビルトインサーバーの画面に文字化けしたログが出るが chcp 65001 では解消しなかった。
