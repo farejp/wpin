@@ -3,7 +3,7 @@
 使ったもの
 + [PHP 7.1 (7.1.10) VC14 x86 Non Thread Safe (2017-Sep-26 23:03:53)](http://windows.php.net/downloads/releases/php-7.1.10-nts-Win32-VC14-x86.zip)  
 + [Xdebug 2.5.5 PHP 7.1 VC14 (32 bit)](https://xdebug.org/files/php_xdebug-2.5.5-7.1-vc14-nts.dll)  
-+ [MariaDB 10.2.9 Stable](https://downloads.mariadb.org/interstitial/mariadb-10.2.9/win32-packages/mariadb-10.2.9-win32.zip/from/http%3A//ftp.yz.yamagata-u.ac.jp/pub/dbms/mariadb/)  
++ [MariaDB 10.2.13 Stable (32 bit)](http://ftp.yz.yamagata-u.ac.jp/pub/dbms/mariadb//mariadb-10.2.13/win32-packages/mariadb-10.2.13-win32.zip)  
 
 やったこと
 + 上記をmiddlewareフォルダに解凍し、できたフォルダをリネーム、xdebugのはphp/extに移動。
