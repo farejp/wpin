@@ -15,9 +15,11 @@
 
 できること
 + ダウンロードして解凍するだけでWindowsでWordPressを動かせます。ローカルなので修正も楽々です。
++ wp-cliを使ってWordPressのインストールが可能です。
++ composerを使ってその他色々とインストールが可能です。
 + Xdebug入りで設定済みですので、すぐにデバッグが可能です。htmlフォルダにはVisual Studio CodeのPHP Debugの設定ファイルを入れてあります。
-+ WordPressのパーマリンクの設定からindex.phpを抜いてもリライトしてくれます。ルータースクリプトとか入れてないんですけど……
-+ concrete5も一通り動きました。
++ WordPressのパーマリンクの設定からindex.phpを抜いてもリライトしてくれます。理由は把握していません……
++ Laravel、EC-CUBE 3.0、concrete5およびDrupalなども一応動きました。
 
 ## インストール
 
@@ -34,23 +36,25 @@
 
 * start.vbsを開く（実行する）。※セキュリティの警告が出ます。ファイルのプロパティを開いて、ブロックの解除をすると出なくなります。
 
-* ドキュメントルートを指定するダイアログが表示されますので、WordPressの場合は「html\wp」としてOKボタンをクリック。
+* ドキュメントルートを指定するダイアログが表示されますので、とりあえずそのままOKボタンをクリック。
 
 * ポート番号を指定するダイアログが表示されます。そのままOKボタンをクリック。
 
 * IEでサイトを開きますか？のダイアログが表示されます。とりあえずOKボタンをクリック。
 
-* これでIEが起動して初回はWordPressのセットアップ画面が表示されるはずです。されない場合はポート番号を変更するか、頑張って80番を開放してください。
-
+* これでIEが起動して phpinfo() の画面が表示されるはずです。されない場合はポート番号を変更するか、頑張って80番を開放してください。
+* これで html フォルダをドキュメントルートとしてWEBサーバーとデータベースサーバーが起動した状態です。
 
 ### ツール
 
-どちらも開く（実行する）と「WindowsによってPCが保護されました」が表示されると思います。詳細情報をクリックして「実行」するか、新しいテキスト ドキュメント.txtを作って中身をコピペしてリネームすると出なくなると思います。
+Windows 10だとbatファイルを激しく拒否してくるのでWSHで作り直しました。
 
-mysql.bat  
-中身：middleware\mariadb\bin\mysql -uroot -p  
-start.vbsでMariaDBを起動した後に使えます。パスワードはrootです。
+#### cli-tools.vbs
+git、composer、wp-cliおよびphpunitなどにパスを通して簡単に使えるようにしてあります。実体はtoolsフォルダに勝手に入れてあります。※gitはデフォルトのインストール先を想定。  
+例えば git --version、wp --version、phpunit --versionおよびcomposer --version などそれぞれ実行してみてください。詳しくは別で書きます。
 
-wp-download.bat  
-中身：bitsadmin.exe /TRANSFER latest-ja https://ja.wordpress.org/latest-ja.zip %CD%\html\latest-ja.zip  
-https://ja.wordpress.org/latest-ja.zipをhtmlフォルダにダウンロードします。展開（解凍）は手動でお願いします。
+
+#### mysql.vbs
+中身は middleware\mariadb\bin\mysql -uroot -proot です。  
+start.vbsでMariaDBを起動した後に使えます。
+
